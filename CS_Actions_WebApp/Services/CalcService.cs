@@ -17,12 +17,12 @@ public class CalcService
     {
         return operatorType switch
         {
-                 "+" => value + value2,
-              "-" => value - value2,
+            "+" => value + value2,
+            "-" => value - value2,
             "*" => value * value2,
-              "/" when value2 == 0 => throw new DivideByZeroException("0で割ることはできません。"),
+            "/" when value2 == 0 => throw new DivideByZeroException("0で割ることはできません。"),
             "/" => value / value2,
-                        _ => throw new InvalidOperationException("不正な演算子です。")
+            _ => throw new InvalidOperationException("不正な演算子です。")
         };
     }
 }
